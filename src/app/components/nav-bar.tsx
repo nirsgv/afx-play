@@ -1,16 +1,23 @@
 'use client';
-
+import { ViewProvider } from '../context/view-context';
+import Kkk from './kkk'
 import Link from 'next/link'
 import React from 'react'
 
 const NavBar = () => {
+
   return (
-    <div className='flex bg-slate-200 p-3 space-x-3'>
-      <Link href="/" className='mr-5'>Next.js</Link>
-      <Link href="/tracks">Tracks</Link>
-			<Link href="/api/auth/signout" className='ml-3'>Sign Out</Link>
-			<Link href="/api/auth/signin">Login</Link>
-    </div>
+		<ViewProvider>
+			<div className='flex bg-slate-200 p-3 space-x-3'>
+				<Link href="/" className='mr-5'>Next.js</Link>
+				<Link href="/tracks">Tracks</Link>
+				<Link href="/api/auth/signout" className='ml-3'>Sign Out</Link>
+				<Link href="/api/auth/signin">Login</Link>
+
+				<Kkk />
+			</div>
+		</ViewProvider>
+
   )
 }
 
