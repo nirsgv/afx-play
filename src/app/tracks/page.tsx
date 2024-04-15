@@ -1,6 +1,5 @@
 import React from 'react'
-import { Track } from '@/common-types';
-import Item from '@/app/components/item';
+import TracksMultiDisplay from '@/app/components/tracks-multi-display';
 
 async function getData() {
 	const res = await fetch('http://localhost:3000/api/tracks');
@@ -20,18 +19,10 @@ const tracks = async () => {
 	const data = await getData();
 	console.log({data, len: data.length})
 	return (
-    <div>
-      {data.length > 0 ? (
-        <ul className="grid grid-cols-4 gap-y-[3.4rem] gap-x-[2.2rem]">
-          {data.map((track: Track) => (
-            <li key={track.ID} className='flex flex-col border border-gray-200 overflow-hidden rounded-md'>
-              <Item {...track} />
-            </li>
-          ))}
-        </ul>
-      ) : <p>Loading...</p>}
-    </div>
 
+    <div>
+				<TracksMultiDisplay tracks={data} />
+    </div>
 	)
 }
 

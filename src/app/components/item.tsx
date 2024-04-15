@@ -13,13 +13,6 @@ const Item = ({
 	LINKS,
 	ID,
 	ALBUM_ID }: Track) => {
-console.log({	ARTIST_NAME,
-	TRACK_TITLE,
-	YEAR,
-	GENRES,
-	LINKS,
-	ID,
-	ALBUM_ID })
     return (
         <div className={`track`}>
             <div className="track__body pt-[1.8rem] px-[1.2rem] pb-0">
@@ -30,7 +23,7 @@ console.log({	ARTIST_NAME,
                         <span className="track__album-title">{`${YEAR}`}</span>
                     </p>
 
-                    <Image src={`https://afx-bucket.s3.amazonaws.com/album_covers/200x200pp/${encodeURIComponent(ALBUM_ID)}.jpg`}
+                    <Image src={`/album_covers/200x200pp/${encodeURIComponent(ALBUM_ID)}.jpg`}
                          alt={''}
 												 width={200}
 												 height={200}
