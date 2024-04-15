@@ -1,7 +1,15 @@
 {
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit",
-		"headwind.sortOnSave": "explicit"
+  "editor.codeActionsOnSave": {
+		"source.fixAll": "explicit"
 	},
+  "eslint.validate": [
+		"javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    { "mode": "auto" }
+  ],
+  "headwind.sortOnSave": "explicit"  // Add this line to control Headwind's sort on save
 }
